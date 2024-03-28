@@ -1,0 +1,18 @@
+{
+  "name": "vite-starter",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@bjorn3/browser_wasi_shim": "^0.2.19",
+    "@ruby/wasm-wasi": "^2.5.0"
+  },
+  "devDependencies": {
+    "vite": "^5.2.6"
+  }
+}

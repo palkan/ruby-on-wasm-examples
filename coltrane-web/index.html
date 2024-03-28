@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coltrane</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <h1>Coltrane Web</h1>
+        <div class="card">
+          <div id="controls" class="flex flex-row gap-4 justify-items-center">
+            <sl-select id="chordSelect" placeholder="Select chord" value="Fm7">
+              <sl-option value="Am">Am</sl-option>
+              <sl-option value="Dm">Dm</sl-option>
+              <sl-option value="E">E</sl-option>
+              <sl-option value="Cm7">Cm7</sl-option>
+              <sl-option value="G#">G#</sl-option>
+              <sl-option value="Fm7">Fm7</sl-option>
+            </sl-select>
+            <sl-select
+              id="representationSelect"
+              placeholder="Select instrument"
+              value="Ukulele"
+            >
+              <sl-option value="Ukulele">Ukulele</sl-option>
+              <sl-option value="Guitar">Guitar</sl-option>
+              <sl-option value="Piano">Piano</sl-option>
+            </sl-select>
+          </div>
+        </div>
+        <p id="output" class="text-gray-800 font-mono whitespace-pre-wrap"></p>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

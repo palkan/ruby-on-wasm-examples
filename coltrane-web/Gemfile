@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+gem "coltrane", "~> 4.1", ">= 4.1.2"
+gem "debug"
+
+# Wasm building tools
+gem "ruby_wasm"
+gem "js" if ENV["JS"] == "true"
