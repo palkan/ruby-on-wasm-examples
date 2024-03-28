@@ -52,14 +52,6 @@ export default async function initVM() {
   vm.initialize();
   vm.$output = output;
 
-  window.$sleeper = {
-    do_sleep: (val) => {
-      return new Promise((resolve) => {
-        setTimeout(resolve, val * 1000);
-      });
-    },
-  };
-
   vm.eval(`
     require "/bundle/setup"
     require "js"

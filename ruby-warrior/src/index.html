@@ -34,12 +34,16 @@
         <sl-spinner></sl-spinner>
       </div>
       <div id="game" class="hidden w-full flex flex-row">
-        <div class="w-1/2 relative">
+        <div class="w-1/2 min-w-[50%] relative flex-grow">
           <div class="w-full relative px-5 border border-black">
             <div id="editor" class="w-full min-h-[400px]"></div>
           </div>
           <div class="flex flex-row items-start gap-5">
-            <sl-button id="runBtn" type="primary" class="mt-4">Run</sl-button>
+            <div class="flex flex-col gap-2">
+              <sl-button id="runBtn" variant="primary" class="mt-4">Run</sl-button>
+              <sl-button id="pauseResumeBtn" variant="secondary" class="mt-4">Pause/Resume</sl-button>
+              <sl-button id="interruptBtn" variant="danger" class="mt-4">Interrupt</sl-button>
+            </div>
             <div id="turn" class="font-mono whitespace-pre-wrap p-2">
             </div>
           </div>

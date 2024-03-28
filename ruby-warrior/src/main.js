@@ -43,11 +43,21 @@ startForm.addEventListener("submit", async (e) => {
 
       if (success) {
         readmeEl.innerText = game.readme;
-        editor.setValue(game.playerrb.toString());
+        editor.setValue(game.playerrb);
       }
     } catch (e) {
       console.error(e);
     }
     runBtn.removeAttribute("disabled");
+  });
+
+  const interruptBtn = document.querySelector("#interruptBtn");
+  interruptBtn.addEventListener("click", () => {
+    game.interrupt();
+  });
+
+  const pauseResumeBtn = document.querySelector("#pauseResumeBtn");
+  pauseResumeBtn.addEventListener("click", () => {
+    game.pauseResume();
   });
 });
