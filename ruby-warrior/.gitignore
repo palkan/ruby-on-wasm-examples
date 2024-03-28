@@ -1,0 +1,12 @@
+tmp/**/*
+rubywarrior/*
+*.gem
+.project
+.buildpath
+.tool-versions
+Gemfile.lock
+dist/
+tmp/
+build/
+rubies/
+*.wasm

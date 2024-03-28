@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruby Warrior</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/themes/light.css"
+    />
+    <script
+      type="module"
+      src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.0/cdn/shoelace-autoloader.js"
+    ></script>
+    <script type="module" src="/main.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./tailwind.css" />
+  </head>
+  <body>
+    <div id="app" class="w-full flex flex-col items-center">
+      <h1 class="text-red-900 text-4xl mb-4">Ruby Warrior</h1>
+      <div id="intro" class="w-[400px]">
+        <form id="startForm" class="flex flex-col gap-4">
+          <sl-input id="nameInput" label="Name yourself" required></sl-input>
+          <sl-select id="levelInput" label="Choose a level" required value="1">
+            <sl-option value="1">Beginner</sl-option>
+            <sl-option value="2">Intermediate</sl-option>
+          </sl-select>
+          <sl-button id="startBtn" type="submit" variant="primary">Start</sl-button>
+        </form>
+      </div>
+      <div id="loading" class="flex flex-row gap-1 items-center justify-center hidden">
+        <h3>Loading...</h3>
+        <sl-spinner></sl-spinner>
+      </div>
+      <div id="game" class="hidden w-full flex flex-row">
+        <div class="w-1/2 relative">
+          <div class="w-full relative px-5 border border-black">
+            <div id="editor" class="w-full min-h-[400px]"></div>
+          </div>
+          <div class="flex flex-row items-start gap-5">
+            <sl-button id="runBtn" type="primary" class="mt-4">Run</sl-button>
+            <div id="turn" class="font-mono whitespace-pre-wrap p-2">
+            </div>
+          </div>
+        </div>
+        <div id="readme" class="font-mono whitespace-pre-wrap min-h-[400px] px-5">
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
